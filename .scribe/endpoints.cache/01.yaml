@@ -96,6 +96,16 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: '|]|{+-'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
       role:
         name: role
         description: ''
@@ -109,6 +119,7 @@ endpoints:
     cleanBodyParameters:
       name: architecto
       email: zbailey@example.net
+      password: '|]|{+-'
       role: architecto
     fileParameters: []
     responses: []
@@ -146,14 +157,14 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -204,14 +215,14 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -235,6 +246,16 @@ endpoints:
         exampleWasSpecified: false
         nullable: false
         custom: []
+      password:
+        name: password
+        description: ''
+        required: true
+        example: '|]|{+-'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
       role:
         name: role
         description: ''
@@ -248,6 +269,7 @@ endpoints:
     cleanBodyParameters:
       name: architecto
       email: zbailey@example.net
+      password: '|]|{+-'
       role: architecto
     fileParameters: []
     responses: []
@@ -285,14 +307,14 @@ endpoints:
         name: id
         description: 'The ID of the user.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         nullable: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []

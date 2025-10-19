@@ -2404,6 +2404,30 @@ response.json()</code></pre>                                        </div>
     <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
         <div class="sl-flex sl-items-center sl-max-w-full">
                                         <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">password</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        |]|{+-
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
                     <div class="sl-font-mono sl-font-semibold sl-mr-2">role</div>
                                             <span class="sl-truncate sl-text-muted">string</span>
                                     </div>
@@ -2546,6 +2570,7 @@ response.json()</code></pre>                                        </div>
                                 >{
     "name": "architecto",
     "email": "zbailey@example.net",
+    "password": "|]|{+-",
     "role": "architecto"
 }</div>
                             </div>
@@ -2648,6 +2673,7 @@ You can check the Dev Tools console for debugging information.</p>
     --data "{
     \"name\": \"architecto\",
     \"email\": \"zbailey@example.net\",
+    \"password\": \"|]|{+-\",
     \"role\": \"architecto\"
 }"
 </code></pre>                                        </div>
@@ -2670,6 +2696,7 @@ const headers = {
 let body = {
     "name": "architecto",
     "email": "zbailey@example.net",
+    "password": "|]|{+-",
     "role": "architecto"
 };
 
@@ -2697,6 +2724,7 @@ $response = $client-&gt;post(
         'json' =&gt; [
             'name' =&gt; 'architecto',
             'email' =&gt; 'zbailey@example.net',
+            'password' =&gt; '|]|{+-',
             'role' =&gt; 'architecto',
         ],
     ]
@@ -2716,6 +2744,7 @@ url = 'http://tasksync.test/api/users'
 payload = {
     "name": "architecto",
     "email": "zbailey@example.net",
+    "password": "|]|{+-",
     "role": "architecto"
 }
 headers = {
@@ -2743,6 +2772,7 @@ response.json()</code></pre>                                        </div>
                 data: {
                 'name': "",
                 'email': "",
+                'password': "",
                 'role': "",
             },
     })
@@ -2883,7 +2913,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        16
+                        1
                     </div>
                 </div>
             </div>
@@ -3016,7 +3046,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-GETapi-users--id--id"
                                                placeholder="The ID of the user."
-                                               value="16" data-component="url"
+                                               value="1" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3115,7 +3145,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request GET \
-    --get "http://tasksync.test/api/users/16" \
+    --get "http://tasksync.test/api/users/1" \
     --header "Authorization: Bearer 1|331Ixp7FInIkuZjI3RH4f6QrZCSCyDUMTk4IWYnh212eba86" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -3126,7 +3156,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://tasksync.test/api/users/16"
+    "http://tasksync.test/api/users/1"
 );
 
 const headers = {
@@ -3146,7 +3176,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://tasksync.test/api/users/16';
+$url = 'http://tasksync.test/api/users/1';
 $response = $client-&gt;get(
     $url,
     [
@@ -3168,7 +3198,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://tasksync.test/api/users/16'
+url = 'http://tasksync.test/api/users/1'
 headers = {
   'Authorization': 'Bearer 1|331Ixp7FInIkuZjI3RH4f6QrZCSCyDUMTk4IWYnh212eba86',
   'Content-Type': 'application/json',
@@ -3185,7 +3215,7 @@ response.json()</code></pre>                                        </div>
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">axios({
     method: 'get',
-    url: 'http://tasksync.test/api/users/16',
+    url: 'http://tasksync.test/api/users/1',
         headers: {
                 'Authorization': 'Bearer 1|331Ixp7FInIkuZjI3RH4f6QrZCSCyDUMTk4IWYnh212eba86',
                 'Content-Type': 'application/json',
@@ -3404,7 +3434,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        16
+                        1
                     </div>
                 </div>
             </div>
@@ -3463,6 +3493,30 @@ response.json()</code></pre>                                        </div>
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
                         zbailey@example.net
+                    </div>
+                </div>
+            </div>
+            </div>
+</div>
+
+            </div>
+    <div class="expandable sl-text-sm sl-border-l sl-ml-px">
+        <div class="sl-flex sl-relative sl-max-w-full sl-py-2 sl-pl-3">
+    <div class="sl-w-1 sl-mt-2 sl-mr-3 sl--ml-3 sl-border-t"></div>
+    <div class="sl-stack sl-stack--vertical sl-stack--1 sl-flex sl-flex-1 sl-flex-col sl-items-stretch sl-max-w-full sl-ml-2 ">
+        <div class="sl-flex sl-items-center sl-max-w-full">
+                                        <div class="sl-flex sl-items-baseline sl-text-base">
+                    <div class="sl-font-mono sl-font-semibold sl-mr-2">password</div>
+                                            <span class="sl-truncate sl-text-muted">string</span>
+                                    </div>
+                                    <div class="sl-flex-1 sl-h-px sl-mx-3"></div>
+                    <span class="sl-ml-2 sl-text-warning">required</span>
+                                    </div>
+                                            <div class="sl-stack sl-stack--horizontal sl-stack--2 sl-flex sl-flex-row sl-items-baseline sl-text-muted">
+                <span>Example:</span> <!-- <span> important for spacing -->
+                <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
+                    <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
+                        |]|{+-
                     </div>
                 </div>
             </div>
@@ -3618,7 +3672,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-PUTapi-users--id--id"
                                                placeholder="The ID of the user."
-                                               value="16" data-component="url"
+                                               value="1" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -3651,6 +3705,7 @@ response.json()</code></pre>                                        </div>
                                 >{
     "name": "architecto",
     "email": "zbailey@example.net",
+    "password": "|]|{+-",
     "role": "architecto"
 }</div>
                             </div>
@@ -3746,13 +3801,14 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request PUT \
-    "http://tasksync.test/api/users/16" \
+    "http://tasksync.test/api/users/1" \
     --header "Authorization: Bearer 1|331Ixp7FInIkuZjI3RH4f6QrZCSCyDUMTk4IWYnh212eba86" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json" \
     --data "{
     \"name\": \"architecto\",
     \"email\": \"zbailey@example.net\",
+    \"password\": \"|]|{+-\",
     \"role\": \"architecto\"
 }"
 </code></pre>                                        </div>
@@ -3763,7 +3819,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://tasksync.test/api/users/16"
+    "http://tasksync.test/api/users/1"
 );
 
 const headers = {
@@ -3775,6 +3831,7 @@ const headers = {
 let body = {
     "name": "architecto",
     "email": "zbailey@example.net",
+    "password": "|]|{+-",
     "role": "architecto"
 };
 
@@ -3790,7 +3847,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://tasksync.test/api/users/16';
+$url = 'http://tasksync.test/api/users/1';
 $response = $client-&gt;put(
     $url,
     [
@@ -3802,6 +3859,7 @@ $response = $client-&gt;put(
         'json' =&gt; [
             'name' =&gt; 'architecto',
             'email' =&gt; 'zbailey@example.net',
+            'password' =&gt; '|]|{+-',
             'role' =&gt; 'architecto',
         ],
     ]
@@ -3817,10 +3875,11 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://tasksync.test/api/users/16'
+url = 'http://tasksync.test/api/users/1'
 payload = {
     "name": "architecto",
     "email": "zbailey@example.net",
+    "password": "|]|{+-",
     "role": "architecto"
 }
 headers = {
@@ -3839,7 +3898,7 @@ response.json()</code></pre>                                        </div>
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">axios({
     method: 'put',
-    url: 'http://tasksync.test/api/users/16',
+    url: 'http://tasksync.test/api/users/1',
         headers: {
                 'Authorization': 'Bearer 1|331Ixp7FInIkuZjI3RH4f6QrZCSCyDUMTk4IWYnh212eba86',
                 'Content-Type': 'application/json',
@@ -3848,6 +3907,7 @@ response.json()</code></pre>                                        </div>
                 data: {
                 'name': "",
                 'email': "",
+                'password': "",
                 'role': "",
             },
     })
@@ -3859,7 +3919,7 @@ response.json()</code></pre>                                        </div>
 });</code></pre>
 <pre><code class="language-javascript">axios({
     method: 'patch',
-    url: 'http://tasksync.test/api/users/16',
+    url: 'http://tasksync.test/api/users/1',
         headers: {
                 'Authorization': 'Bearer 1|331Ixp7FInIkuZjI3RH4f6QrZCSCyDUMTk4IWYnh212eba86',
                 'Content-Type': 'application/json',
@@ -3868,6 +3928,7 @@ response.json()</code></pre>                                        </div>
                 data: {
                 'name': "",
                 'email': "",
+                'password': "",
                 'role': "",
             },
     })
@@ -4008,7 +4069,7 @@ response.json()</code></pre>                                        </div>
                 <span>Example:</span> <!-- <span> important for spacing -->
                 <div class="sl-flex sl-flex-1 sl-flex-wrap" style="gap: 4px;">
                     <div class="sl-max-w-full sl-break-all sl-px-1 sl-bg-canvas-tint sl-text-muted sl-rounded sl-border">
-                        16
+                        1
                     </div>
                 </div>
             </div>
@@ -4141,7 +4202,7 @@ response.json()</code></pre>                                        </div>
                                         <input aria-label="id" name="id"
                                                id="urlparam-DELETEapi-users--id--id"
                                                placeholder="The ID of the user."
-                                               value="16" data-component="url"
+                                               value="1" data-component="url"
                                                class="sl-relative sl-w-full sl-h-md sl-text-base sl-pr-2.5 sl-pl-2.5 sl-rounded sl-border-transparent hover:sl-border-input focus:sl-border-primary sl-border">
                                     </div>
                                 </div>
@@ -4240,7 +4301,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-bash">curl --request DELETE \
-    "http://tasksync.test/api/users/16" \
+    "http://tasksync.test/api/users/1" \
     --header "Authorization: Bearer 1|331Ixp7FInIkuZjI3RH4f6QrZCSCyDUMTk4IWYnh212eba86" \
     --header "Content-Type: application/json" \
     --header "Accept: application/json"</code></pre>                                        </div>
@@ -4251,7 +4312,7 @@ You can check the Dev Tools console for debugging information.</p>
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">const url = new URL(
-    "http://tasksync.test/api/users/16"
+    "http://tasksync.test/api/users/1"
 );
 
 const headers = {
@@ -4271,7 +4332,7 @@ fetch(url, {
                                     <div class="sl-px-0 sl-py-1">
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-php">$client = new \GuzzleHttp\Client();
-$url = 'http://tasksync.test/api/users/16';
+$url = 'http://tasksync.test/api/users/1';
 $response = $client-&gt;delete(
     $url,
     [
@@ -4293,7 +4354,7 @@ print_r(json_decode((string) $body));</code></pre>                              
                                             <pre><code class="language-python">import requests
 import json
 
-url = 'http://tasksync.test/api/users/16'
+url = 'http://tasksync.test/api/users/1'
 headers = {
   'Authorization': 'Bearer 1|331Ixp7FInIkuZjI3RH4f6QrZCSCyDUMTk4IWYnh212eba86',
   'Content-Type': 'application/json',
@@ -4310,7 +4371,7 @@ response.json()</code></pre>                                        </div>
                                         <div style="max-height: 400px;" class="sl-overflow-y-auto sl-rounded">
                                             <pre><code class="language-javascript">axios({
     method: 'delete',
-    url: 'http://tasksync.test/api/users/16',
+    url: 'http://tasksync.test/api/users/1',
         headers: {
                 'Authorization': 'Bearer 1|331Ixp7FInIkuZjI3RH4f6QrZCSCyDUMTk4IWYnh212eba86',
                 'Content-Type': 'application/json',
