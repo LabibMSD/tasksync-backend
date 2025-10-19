@@ -3,27 +3,23 @@
 namespace App\Services;
 
 use App\Models\User;
-use App\Repositories\RoleRepository;
-use App\Repositories\UserRepository;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AuthService
 {
-    private UserRepository $userRepository;
+    private UserService $userService;
     private TokenService $tokenService;
 
-    public function __construct(UserRepository $userRepository, TokenService $tokenService)
+    public function __construct(UserService $userService, TokenService $tokenService)
     {
-        $this->userRepository = $userRepository;
+        $this->userService = $userService;
         $this->tokenService = $tokenService;
     }
 
     public function register(array $data): array
     {
-        $data['password'] = Hash::make($data['password']);
-
-        $user = $this->userRepository->create($data);
+        $user = $this->userService->create($data);
         $token = $this->tokenService->generate($user, 'auth');
 
         return [
